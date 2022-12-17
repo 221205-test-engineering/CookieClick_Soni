@@ -49,7 +49,7 @@ public class CookieClicker {
     }
     // Cookie clicking starting
     public static void cookieClick(int num) throws InterruptedException {
-        // This english click is to remove the dive which is obstructing the cookie click
+        // This english click is to remove the div which is obstructing the cookie click
         WebElement english = new WebDriverWait(driver, Duration.ofSeconds(5)).until(
                 ExpectedConditions.elementToBeClickable(By.id("langSelect-EN")));
         english.click();
@@ -57,9 +57,9 @@ public class CookieClicker {
                 ExpectedConditions.elementToBeClickable(By.id("bigCookie")));
         // The number of cookie click increases with the range of for loop
         int k;
-        for(k=0;k<10000;k++) {
+        for(k=0; k<10000; k++) {
             bigCookie.click();
         }
-        System.out.println("Number of cookie clicks: "+k);
+        System.out.println("Number of cookie clicks: " +k);
     }
 }
